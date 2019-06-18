@@ -1,24 +1,379 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id='main'>
 
 <head>
   <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link href="index.css" rel="stylesheet">
+  <!-- <link href="index.css" rel="stylesheet"> -->
   <meta charset="utf-8">
   <title>高雄市觀音線協談中心</title>
   <script type="text/javascript">
-    $(function() {
-      $(window).scroll(function(){
-	       console.log( $('html').scrollTop())
-       })
-    })
-  </script>
-</head>
+  $(function() {
+    const  w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const  h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
+    $(window).scroll(function() {
+      $('html').scrollTop() != 0 ? $('#nav').addClass('bb') : $('#nav').removeClass('bb');
+    });
+
+    $("#goService").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#s2").offset().top - h * 0.11
+      }, 300, 'swing');
+    });
+
+    $("#goStory").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#s3").offset().top - h * 0.02
+      }, 300, 'swing');
+    });
+  })
+  </script>
+  <style lang="">
+    /* config */
+    html {
+      /* overflow: hidden; */
+    }
+
+    div {
+      /* box-shadow: 0 0 0 1px silver; */
+      background-position: center; /* Cente image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: contain; /* Resize the background image to cover the entire container */
+    }
+
+    .bb {
+      opacity: 1;
+      background: rgba(48,48,48, 0.9)!important;
+      box-shadow: 0 1px 2px 0 silver;
+    }
+    /* config */
+
+    /* header */
+    
+
+    #nav {
+      background: transparent;
+      display: flex;
+      width: 100%;
+      transition: .3s;
+    }
+
+    nav > a, nav > div {
+      min-width: 50%;
+      flex: 1;
+    }
+
+    .logo {
+      background-image: url('./asset/index/LOGO.png');
+      flex: 1;
+    }
+
+    .collapse.navbar-collapse {
+      height: 100%;
+    }
+
+    .banner {
+      background: transparent;
+      color: #fff;
+      width: 100%;
+      height: 12vh;
+      display: flex;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      padding-right: 15px;
+    }
+
+    .nav-link {
+      color: rgb(222,222,222)!important;
+      text-align: center;
+      font-size: 1.2em;
+      transition: .2s;
+      /* cursor: pointer; */
+    }
+
+    .nav-link:hover {
+      color: rgb(239,239,239)!important;
+      cursor: pointer;
+
+    }
+
+    .nav-item {
+      flex: 1;
+    }
+
+    .ls-1e {
+      letter-spacing: 1em;
+    }
+
+    /* header */
+
+    /* body */
+
+    .main-container {
+      /* overflow: auto;
+      
+      height: 100vh; */
+      overflow-X: hidden;
+    }
+
+    .main-container::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    .main-container::-webkit-scrollbar-thumb {
+      background: #666;
+      border-radius: 20px;
+    }
+
+    .main-container::-webkit-scrollbar-track {
+      background: rgba(48,48,48, 0.1);
+      /* border-radius: 20px; */
+    }
+
+    section {
+      width: 100%;
+      position: relative;
+    }
+
+    .section-1 {
+      height: 100vh;
+      /* background-image: url('./asset/index/P1_1.png'); */
+    }
+
+    .section-1 img{
+      transform: scale(1.15);
+    }
+
+    .section-2 {
+      height: 50vh;
+      background-color: rgb(239,239,240);
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+
+    .service-info {
+      width: 50%;
+      table-layout: fixed;
+      height: 85%;
+      position: relative;
+      left: 7%;
+      top: 3%;
+    }
+
+    .service-info th {
+      font-size: 2.2em!important;
+    }
+
+    .service-info td {
+      line-height: 2em;
+      font-size: 1.3em;
+    }
+    .service-info th, .service-info td {
+      color: #555;
+      /* text-align: center; */
+    }
+
+    .section-3 {
+      height: 150vh;
+      background-color: rgb(247,247,247);
+      position: relative;
+    }
+
+    .p1 {
+      right: 0;
+      top: 10vh;
+      z-index: 1;
+    }
+
+    .p2 {
+      top: 12vh;
+      left: 25vw;
+      width: 30vw;
+      height: 30vw;
+      background: #fff;
+      padding: 25px;
+      z-index: 1;
+      color: #666;
+      font-size: 1.4em;
+    }
+
+    .p3 {
+      top: 25vh;
+    }
+
+    .p4 {
+      width: 55vw;
+      height: 40vh;
+      top: 85vh;
+    }
+
+    .p5 {
+      width: 35vw;
+      height: 32vh;
+      top: 88vh;
+      right: 12vw;
+      background: #fff;
+      
+      padding: 25px;
+      z-index: 1;
+      color: #666;
+      font-size: 1.4em;
+      z-index: 2;
+    }
+
+    .p6 {
+      right: 0;
+      top: 90vh;
+    }
+
+    .section-3 > div {
+      position: absolute;
+    }
+    .section-4 {
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('./asset/index/pp.png');
+      font-size: 1.5em;
+      color: #a9a9a9b8;
+      line-height: 2em;
+      letter-spacing: 1px;
+    }
+
+    .section-4 div {
+      padding-top: 60px;
+    }
+    /* body */
+
+  </style>
+</head>
 <body>
-  
+  <div class="main-container" id='main-container'>
+      <div class='banner fixed-top'>
+          <nav class="navbar navbar-expand-lg navbar-light" id='nav'>
+            <a class="navbar-brand" href="./index.html">
+              <img src="./asset/index/LOGO.png" alt="home">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link ls-1e" href="./index.html">首頁<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  id='goService'>服務內容</a>
+                </li>
+                <li class="nav-item"> 
+                  <a class="nav-link ls-1e"  id="goStory">緣起</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">課程活動</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">女子監獄</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">成長育樂營</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    <section class='section-1' id='s1'>
+      <img src="./asset/index/P1_1.png" alt="" />
+    </section>
+    <section class='section-2' id='s2'>
+      <table class='service-info'>
+        <tr>
+          <th>
+            Service items<br/>服務項目
+          </th>
+          <th>
+            Service line<br/>服務電話
+          </th>
+        </tr>
+        <tr>
+          <td>凡感情困擾、夫妻關係、親子溝通、<br/>
+              人際相處、生涯發展、自我探索、<br/>人
+              生信仰、個人生活適應
+          </td>
+          <td>
+              協談專線  224-7181<br/>行政專線  224-8948	
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section class='section-3' id='s3'>
+      <div class="p1">
+        <img src="./asset/index/P1_1_3.png" alt="">
+      </div>
+      <div class="p2">
+        <h2>
+          <span style="font-size: 1.2em">
+            Origin story
+          </span>
+          <br/>
+          緣起
+          <br/>
+          <br/>
+        </h2>
+        高雄正信佛教青年會在推廣佛法教育之餘，為了服務關
+        懷更多的社會大眾，在佛青會歷任導師: 菩妙長老、開
+        證長老、宏印法師、以及前議長陳田錨夫人、中山大學
+        孫小玉教授等人士大力支持與奔走下，創辦了觀音線協
+        談中心，並於82年6月26日正式開線。<br/>
+        宗旨：<br/>
+        本中心秉持觀世音菩薩「慈悲喜捨，聞聲救苦」之精神
+        ，從事關懷陪伴大眾之工作，為需要協助之當事人提供
+        協談服務，使其能有效積極的處理煩惱、突破困境，以
+        獲得心中的光明與自在!
+      </div>
+      <div class="p3">
+        <img src="./asset/index/P1_1_1.png" alt="">
+      </div>
+      <div class="p4">
+        <a href="https://www.google.com/maps/place/%E9%AB%98%E9%9B%84%E8%A7%80%E9%9F%B3%E7%B7%9A/@22.6297748,120.3186399,17z/data=!4m5!3m4!1s0x0:0xa6918ec78e7b6a07!8m2!3d22.6303739!4d120.3194124">
+          <img src="./asset/index/M.png" alt="">
+        </a>
+      </div>
+      <div class="p5">
+        <h2>
+          <span style="font-size: 1.2em">
+              Map location
+          </span>
+          <br/>
+          地圖位置
+          <br/>
+          <br/>
+        </h2>
+        802高雄市苓雅區中正二路58號
+        <br/>
+        Zhongzheng 2nd Road, Yuya District, Kaohsiung City
+      </div>
+      <div class="p6">
+        <img src="./asset/index/P1_1_2.png" alt="">
+      </div>
+    </section>
+    <section class='section-4'>
+      <img src="./asset/index/PPLOGO.png" alt="">
+      <div>
+        協談專線：  224-7181  行政專線: 224-8948<br/>
+        電    郵:   kis.chba@gmail.com<br/>
+        服務時間：  每週一至週六  下午2：30 - 5：30 睌上6：30 - 9：30<br/>
+        帳號 :      元大銀行806-苓雅分行00108100175014<br/>
+        歡迎贊助 :  戶名:高雄市正信佛教青年會<br/>
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>
