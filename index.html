@@ -147,6 +147,7 @@
 
     .section-1 img{
       transform: scale(1.15);
+      width: 100%;
     }
 
     .section-2 {
@@ -158,7 +159,7 @@
     }
 
     .service-info {
-      width: 50%;
+      width: 60%;
       table-layout: fixed;
       height: 85%;
       position: relative;
@@ -170,10 +171,19 @@
       font-size: 2.2em!important;
     }
 
+    .service-info th:nth-child(2) {
+      padding: 30px
+    }
+
     .service-info td {
       line-height: 2em;
       font-size: 1.3em;
     }
+
+    .service-info td:nth-child(2) {
+      padding: 30px
+    }
+
     .service-info th, .service-info td {
       color: #555;
       /* text-align: center; */
@@ -190,21 +200,30 @@
       top: 10vh;
       z-index: 1;
     }
+    .p1 img {
+      width: 50vw;
+    }
 
     .p2 {
-      top: 12vh;
+      top: 11vh;
       left: 25vw;
       width: 30vw;
+      min-width: 450px;
       height: 30vw;
+      min-height: 450px;
       background: #fff;
       padding: 25px;
       z-index: 1;
       color: #666;
-      font-size: 1.4em;
+      font-size: 1.1em;
     }
 
     .p3 {
       top: 25vh;
+    }
+
+    .p3 img {
+      width: 73%  ;
     }
 
     .p4 {
@@ -213,11 +232,18 @@
       top: 85vh;
     }
 
+    .p4 img {
+      width: 100%;
+      transform: scale(1.3);
+      margin-top: 6vh;
+    }
+
     .p5 {
+      transform: scale(0.8);
       width: 35vw;
       height: 32vh;
-      top: 88vh;
-      right: 12vw;
+      top: 86vh;
+      right: 13vw;
       background: #fff;
       
       padding: 25px;
@@ -250,6 +276,11 @@
 
     .section-4 div {
       padding-top: 60px;
+    }
+
+    .p2, .p5, .p4 img, .p1 img {
+      box-shadow: 0px 0px 10px 1px silver;
+      border-radius: 3px;
     }
     /* body */
 
