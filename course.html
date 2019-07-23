@@ -51,10 +51,9 @@
     /* config */
 
     /* header */
-    
-
     #nav {
       /* background: rgb(239,239,239)!important; */
+
       background: transparent;
       display: flex;
       width: 100%;
@@ -113,13 +112,14 @@
       letter-spacing: 1em;
     }
 
+
     /* header */
 
     /* body */
 
     .main-container {
       /* overflow: auto;
-      
+
       height: 100vh; */
       overflow-X: hidden;
     }
@@ -127,7 +127,7 @@
     .main-container::-webkit-scrollbar {
       width: 10px;
     }
-    
+
     .main-container::-webkit-scrollbar-thumb {
       background: #666;
       border-radius: 20px;
@@ -151,11 +151,11 @@
 
     .section-1 .bg {
       width: 100%;
-      transform: scale(1.4) translate(110px, 105px);
+      transform: scale(2) translate(130px, 130px);
     }
 
     .section-1 .logo {
-
+      display: none;
       position: absolute;
       top: 20px;
       right: 10vw;
@@ -170,9 +170,9 @@
       align-self: center;
       position: relative;
     }
-   
+
     .section-3 {
-      height: 175vh;
+      height: 130vh;
       background-color: rgb(239,239,240);
       position: relative;
     }
@@ -227,7 +227,7 @@
       top: 86vh;
       right: 13vw;
       background: #fff;
-      
+
       padding: 25px;
       z-index: 1;
       color: #666;
@@ -266,6 +266,8 @@
     }
     /* body */
 
+
+
   </style>
 </head>
 <body>
@@ -286,7 +288,7 @@
             <li class="nav-item">
               <a class="nav-link"  id='goService'>服務內容</a>
             </li>
-            <li class="nav-item"> 
+            <li class="nav-item">
               <a class="nav-link ls-1e"  id="goStory">緣起</a>
             </li>
             <li class="nav-item">
@@ -310,7 +312,7 @@
       <div class='main-panel'>
           <h2 style="text-align: center;margin: 10px 0;" >Music word</h2 >
           <h2 style="text-align: center;margin: 10px 0;" >音樂點字推廣</h2 >
-          
+
           緣起：<br/>
           辜進心老師畢業於文藻外語大學日文系，從小因為眼癌而全盲，2012年帶著導盲犬瑞斯到日本，2013年進入筑波大學附屬特別<br/>
           支援教育視覺障礙學校音樂科研讀。<br/>
@@ -333,13 +335,13 @@
         }
 
         .P3_1 {
-          top: 73vh;
-          left: 17vw;
+          top: 63vh;
+          left: 25vw;
         }
 
         .P3_2 {
-          top: 65vh;
-          left: 60vw;
+          top: 52vh;
+          left: 57vw;
         }
 
         .section-2 .main-panel {
@@ -363,7 +365,7 @@
           position: absolute;
           transform: translate(-50%, -50%);
           left: 50%;
-          top: 95vh;
+          top: 80vh;
           z-index: 2;
           border-radius: 2px;
           background: #fff;
@@ -382,7 +384,7 @@
           width: 975px;
           height: 340px;
           background: rgb(94, 110, 105);
-          top: 80vh;
+          top: 67vh;
           z-index: 1;
           position: absolute;
           left: 50vw;
@@ -417,6 +419,7 @@
       </div>
       <div class="darkgreen-box"></div>
       <div class="lightgreen-box"></div>
+      <div class="darkgreen-bg-box"></div>
       <img class="P3_3" src="./asset/course/P3_3.png" alt="">
       <img class="P3_4" src="./asset/course/P3_4.png" alt="">
       <style>
@@ -429,7 +432,7 @@
           background: #fff;
           z-index: 2;
           padding: 20px 100px;
-          top: 25vh;
+          top: 3vh;
           left: 8vw;
         }
 
@@ -441,24 +444,157 @@
           line-height: 1.8em;
           padding: 10px 20px 10px 596px;
           background: #fff;
-          top: 85vh;
-          left: 25vw;
+          top: 50vh;
+          left: 28vw;
+          z-index: 1;
         }
 
         .section-3 img {
           box-shadow: 0px 0px 10px 3px silver;
           position: absolute;
+          z-index: 2;
         }
 
         .P3_3 {
-          top: 97vh;
-          left: 13vw;
+          top: 61vh;
+          left: 18.5vw;
         }
 
         .P3_4 {
-          top: 55vh;
+          top: 22vh;
           left: 39vw;
           z-index: 3;
+        }
+
+        .darkgreen-bg-box {
+          width: 25vw;
+          height: 67vh;
+          background: rgb(131, 148, 141);
+          position: absolute;
+          top: 43vh;
+          left: 74vw;
+          z-index: 0;
+        }
+
+        @media only screen and (max-width: 1600px) {
+          .section-2 .white-box {
+            top: 83vh;
+          }
+
+          .P3_2 {
+            top: 55vh !important;
+          }
+
+          .P3_1 {
+            left: 17vw;
+          }
+
+          .section-3 .white-box {
+            top: 6vh;
+          }
+
+          .P3_4 {
+            top: 27vh;
+            left: 45vw;
+          }
+
+          .section-3 .white-box2 {
+            top: 57vh;
+            left: 30vw;
+          }
+
+          .P3_3 {
+            top: 67vh;
+          }
+
+          .section-3 {
+            height: 140vh;
+          }
+        }
+
+        @media only screen and (max-width: 1440px) {
+          .nav-link {
+            font-size: 1em;
+          }
+          .section-2 .main-panel {
+            min-width: 1280px !important;
+          }
+
+          .section-2 .white-box {
+            top: 84vh
+          }
+
+          .P3_2 {
+            top: 58vh !important;
+          }
+
+          .P3_1 {
+            left: 12vw;
+          }
+
+          .section-3 .white-box {
+            top: 8vh;
+          }
+
+          .section-3 .white-box2 {
+            top: 61vh;
+          }
+
+          .section-3 img {
+            transform: scale(0.9);
+          }
+
+          .P3_4 {
+            left: 47vw;
+            top: 22vh;
+          }
+
+          .P3_3 {
+            top: 74vh;
+            transform: scale(1.1)!important;
+          }
+
+          .darkgreen-bg-box {
+            top: 54vh;
+          }
+        }
+
+        @media only screen and (max-width: 1281px) {
+          .section-2 .white-box {
+            top: 90vh
+          }
+
+          .P3_1 {
+            left: 8vw;
+          }
+
+          .section-3 img {
+            transform: scale(0.7);
+          }
+
+          .section-3 .white-box {
+            top: 16vh;
+          }
+
+          .P3_4 {
+            top: 24vh;
+            left: 50vw;
+          }
+
+          .section-3 .white-box2 {
+            top: 73vh;
+            left: 18vw;
+          }
+
+          .P3_3 {
+            top: 88vh;
+            transform: scale(1.1)!important;
+            left: 26.5vw;
+          }
+
+          .section-3 {
+            height: 160vh;
+          }
         }
       </style>
     </section>

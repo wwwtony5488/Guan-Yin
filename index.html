@@ -51,13 +51,15 @@
     /* config */
 
     /* header */
-    
+
 
     #nav {
+      /* background: rgb(239,239,239)!important; */
       background: transparent;
       display: flex;
       width: 100%;
       transition: .3s;
+      color: #000;
     }
 
     nav > a, nav > div {
@@ -90,6 +92,7 @@
 
     .nav-link {
       color: rgb(222,222,222)!important;
+      /* color: #fff; */
       text-align: center;
       font-size: 1.2em;
       transition: .2s;
@@ -116,7 +119,7 @@
 
     .main-container {
       /* overflow: auto;
-      
+
       height: 100vh; */
       overflow-X: hidden;
     }
@@ -124,7 +127,7 @@
     .main-container::-webkit-scrollbar {
       width: 10px;
     }
-    
+
     .main-container::-webkit-scrollbar-thumb {
       background: #666;
       border-radius: 20px;
@@ -206,7 +209,7 @@
 
     .p2 {
       top: 11vh;
-      left: 25vw;
+      left: 20vw;
       width: 30vw;
       min-width: 450px;
       height: 30vw;
@@ -216,6 +219,7 @@
       z-index: 1;
       color: #666;
       font-size: 1.1em;
+      line-height: 2em;
     }
 
     .p3 {
@@ -229,6 +233,7 @@
     .p4 {
       width: 55vw;
       height: 40vh;
+      z-index: 1;
       top: 85vh;
     }
 
@@ -245,9 +250,7 @@
       top: 86vh;
       right: 13vw;
       background: #fff;
-      
       padding: 25px;
-      z-index: 1;
       color: #666;
       font-size: 1.4em;
       z-index: 2;
@@ -256,6 +259,7 @@
     .p6 {
       right: 0;
       top: 90vh;
+      z-index: 0;
     }
 
     .section-3 > div {
@@ -270,7 +274,7 @@
       background-image: url('./asset/index/pp.png');
       font-size: 1.5em;
       color: #a9a9a9b8;
-      line-height: 2em;
+      line-height: 1.7em;
       letter-spacing: 1px;
       background: #2d3d46;
     }
@@ -284,7 +288,46 @@
       border-radius: 3px;
     }
     /* body */
+    @media only screen and (max-width: 1600px) {
+      .p2 h2{
+        height: 100px;
+      }
 
+      .p2 {
+        font-size: 1.1em;
+        line-height: 1.8em;
+      }
+    }
+
+    @media only screen and (max-width: 1440px) {
+      .nav-link {
+        font-size: 1em;
+      }
+
+      .p2 {
+        font-size: 1em !important;
+        line-height: 1.8em;
+      }
+
+      .section-3 > div {
+        min-height: 285px !important;
+      }
+
+      .p3 img {
+        width: 66%;
+      }
+    }
+
+    @media only screen and (max-width: 1281px) {
+      .p2 h2{
+        height: 80px;
+      }
+
+      .p2 {
+        font-size: 1em !important;
+        line-height: 1.7em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -305,7 +348,7 @@
             <li class="nav-item">
               <a class="nav-link"  id='goService'>服務內容</a>
             </li>
-            <li class="nav-item"> 
+            <li class="nav-item">
               <a class="nav-link ls-1e"  id="goStory">緣起</a>
             </li>
             <li class="nav-item">
@@ -340,7 +383,7 @@
               生信仰、個人生活適應
           </td>
           <td>
-              協談專線  224-7181<br/>行政專線  224-8948	
+              協談專線  224-7181<br/>行政專線  224-8948
           </td>
         </tr>
       </table>
