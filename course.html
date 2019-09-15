@@ -226,7 +226,7 @@
       position: absolute;
     }
     .section-4 {
-      height: 50vh;
+      height: 35vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -247,9 +247,15 @@
       border-radius: 3px;
     }
     /* body */
+    .section-3 img, .section-2 img {
+      transition: .3s;
+    }
 
-
-
+    .section-3 img:hover, .section-2 img:hover {
+      transform: scale(1.3);
+      z-index: 1000!important;
+      box-shadow: 1px 1px 10px 3px gray;
+    }
   </style>
 </head>
 <body>
@@ -266,12 +272,6 @@
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link ls-1e" href="./index.html">首頁<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  id='goService'>服務內容</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link ls-1e"  id="goStory">緣起</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./course.html">課程活動</a>
@@ -362,6 +362,8 @@
           left: 0;
         }
 
+
+
         .section-2 .darkgreen-box {
           width: 975px;
           height: 340px;
@@ -401,6 +403,7 @@
       </div>
       <div class="darkgreen-box"></div>
       <div class="lightgreen-box"></div>
+      <div class="green-box"></div>
       <div class="darkgreen-bg-box"></div>
       <img class="P3_3" src="./asset/course/P3_3.png" alt="">
       <img class="P3_4" src="./asset/course/P3_4.png" alt="">
@@ -416,6 +419,16 @@
           padding: 20px 100px;
           top: 3vh;
           left: 8vw;
+        }
+
+        .section-3 .green-box {
+          position: absolute;
+          top: 20vh;
+          left: 0;
+
+          background: rgb(74, 88, 84);
+          width: 433px;
+          height: 340px;
         }
 
         .section-3 .white-box2 {
