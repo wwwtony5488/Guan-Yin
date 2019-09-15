@@ -145,12 +145,23 @@
     }
 
     .section-2 {
-      height: 100vh;
+      height: 110vh;
       background-color: rgb(239,239,240);
       display: flex;
       justify-content: center;
       align-self: center;
       position: relative;
+      z-index: 100;
+    }
+
+    .section-2 img {
+      z-index: 10;
+    }
+
+    .copyright {
+      position: absolute;
+      bottom: 15px;
+      right: 180px;
     }
 
     .section-3 {
@@ -164,6 +175,7 @@
       top: 10vh;
       z-index: 1;
     }
+    
     .p1 img {
       width: 50vw;
     }
@@ -225,6 +237,7 @@
     .section-3 > div {
       position: absolute;
     }
+
     .section-4 {
       height: 50vh;
       display: flex;
@@ -247,8 +260,6 @@
       border-radius: 3px;
     }
     /* body */
-
-
 
   </style>
 </head>
@@ -292,23 +303,24 @@
     </section>
     <section class='section-2' id='s2'>
       <div class='main-panel'>
-          <h2 style="text-align: center;margin: 15px 0;" >Music word</h2 >
-          <h2 style="text-align: center;margin: 15px 0;" >音樂點字推廣</h2 >
-
-          緣起：<br/>
-          辜進心老師畢業於文藻外語大學日文系，從小因為眼癌而全盲，2012年帶著導盲犬瑞斯到日本，2013年進入筑波大學附屬特別<br/>
-          支援教育視覺障礙學校音樂科研讀。<br/>
-          視障朋友因為視力上的限制，所以學習音樂的過程中，須要靠許多人錄音，指導，然後自己在私下慢慢靠著耳朵還有記憶一點一<br/>
-          滴的把樂譜記起來，慢慢完成曲子，非常的辛苦。然而，在日本卻有一群非常熱心的志工幫忙視障朋友，將一般人閱讀的五線譜<br/>
-          轉譯成視障者可以閱讀的點字樂譜。<br/>
-          回國之後，辜進心老師希望在台灣推廣盲人點字樂譜，期望藉此讓視障者靠自己的能力完成演奏，突破眼睛無法閱讀樂譜或忘記<br/>
-          旋律節奏的困擾。<br/>
+          <h2 style="text-align: center;margin: 15px 0;">Women's prison</h2 >
+          <h2 style="text-align: center;margin: 15px 0;">女子監獄</h2 >
+            自民國98年5月高雄市正信佛教青年會觀音線協談中心即加入本監教誨工作行列，團隊志工們每週不畏風雨與辛苦，<br/>
+            從不懈怠蒞臨本監從事收容人輔導工作，鼓勵受刑人，給予其欠缺與渴望的情感支持，並提供各項諮詢與生活資訊，<br/>
+            豐富與充實其獄中生活，運用熱情和智慧教化收容人；配合本監安排個別輔導，針對個案所需給予支持和關懷，<br/>
+            讓受刑人身、心、靈的需求皆得以滿足，引導其能較正向思考未來的人生，建立收容人復歸社會之礎石及動力，<br/>
+            頗具教誨成效，受刑人深感獲益良多，成效堪稱卓著。<br/>
+          <span class="copyright">法務部矯政署高雄女子監獄</span>
       </div>
       <div class='lightgreen-box'></div>
-      <div class='white-box'></div>
+      <div class='white-box'>
+        <img class='P2_1' src="./asset/jail/P2_1.png" alt="">
+        <img class='P2_2' src="./asset/jail/P2_2.png" alt="">
+        <img class='P2_3' src="./asset/jail/P2_3.png" alt="">
+        <img class='P2_4' src="./asset/jail/P2_4.png" alt="">
+      </div>
       <div class='darkgreen-box'></div>
-      <img class='P3_1' src="./asset/course/P3_1.png" alt="">
-      <img class='P3_2' src="./asset/course/P3_2.png" alt="">
+      
       <style>
         .section-2 img {
           position: absolute;
@@ -322,13 +334,13 @@
         }
 
         .P3_2 {
-          top: 54vh;
-          left: 58vw;
+          top: 52vh;
+          left: 57vw;
         }
 
         .section-2 .main-panel {
           min-width: 1360px;
-          height: 448px;
+          height: 430px;
           background: white;
           position: absolute;
           transform: translate(-50%, -50%);
@@ -336,18 +348,19 @@
           top: 35vh;
           font-size: 1.3em;
           line-height: 1.8em;
-          padding: 10px 50px;
+          padding: 10px 120px;
           z-index: 1;
           border-radius: 2px;
+          line-height: 40px;
         }
 
         .section-2 .white-box {
           min-width: 1174px;
-          height: 396px;
+          height: 456px;
           position: absolute;
           transform: translate(-50%, -50%);
           left: 50%;
-          top: 80vh;
+          top: 83vh;
           z-index: 2;
           border-radius: 2px;
           background: #fff;
@@ -370,6 +383,27 @@
           z-index: 1;
           position: absolute;
           left: 50vw;
+        }
+
+        .P2_1{
+          top: -66px;
+          left: 20px;
+        }
+
+        .P2_2{
+          top: 0px;
+          left: 385px;
+        }
+
+        .P2_3{
+          top: 270px;
+          left: 540px;
+        }
+
+        .P2_4{
+          top: 100px;
+          left: 800px;
+          transform: scale(1.2);
         }
       </style>
     </section>

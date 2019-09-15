@@ -8,6 +8,28 @@
   <!-- <link href="index.css" rel="stylesheet"> -->
   <meta charset="utf-8">
   <title>高雄市觀音線協談中心</title>
+  <script type="text/javascript">
+  $(function() {
+    const  w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const  h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+    $(window).scroll(function() {
+      // $('html').scrollTop() != 0 ? $('#nav').addClass('bb') : $('#nav').removeClass('bb');
+    });
+
+    $("#goService").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#s2").offset().top - h * 0.11
+      }, 300, 'swing');
+    });
+
+    $("#goStory").click(function() {
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $("#s3").offset().top - h * 0.02
+      }, 300, 'swing');
+    });
+  })
+  </script>
   <style lang="">
     /* config */
     html {
@@ -38,7 +60,7 @@
       color: #000;
 
       opacity: 1;
-      background: rgb(236,236,236) !important;
+      background: rgba(48,48,48, 0.9)!important;
       box-shadow: 0 1px 2px 0 silver;
     }
 
@@ -48,7 +70,7 @@
     }
 
     .logo {
-      background-image: url('./asset/course/P2.png');
+      background-image: url('./asset/index/LOGO.png');
       flex: 1;
     }
 
@@ -71,7 +93,7 @@
     }
 
     .nav-link {
-      color: rgba(48,48,48, 0.9)!important;
+      color: rgb(222,222,222)!important;
       /* color: #fff; */
       text-align: center;
       font-size: 1.2em;
@@ -80,7 +102,7 @@
     }
 
     .nav-link:hover {
-      color: rgba(48,48,48, 0.5)!important;
+      color: rgb(239,239,239)!important;
       cursor: pointer;
 
     }
@@ -126,14 +148,13 @@
 
     .section-1 {
       /* background-image: url('./asset/index/P1_1.png'); */
-      /* overflow: hidden; */
-      margin-top: 114px;
-      height: 33vh;
+      overflow: hidden;
+      height: 38vh;
     }
 
     .section-1 .bg {
       width: 100%;
-      /* transform: scale(2) translate(130px, 130px); */
+      transform: scale(2) translate(130px, 130px);
     }
 
     .section-1 .logo {
@@ -257,7 +278,7 @@
     <div class='banner fixed-top'>
       <nav class="navbar navbar-expand-lg navbar-light" id='nav'>
         <a class="navbar-brand" href="./index.html">
-          <img src="./asset/course/BLOGO.png" alt="home">
+          <img src="./asset/index/LOGO.png" alt="home">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -287,13 +308,13 @@
       </nav>
     </div>
     <section class='section-1' id='s1'>
-      <img class='bg' src="./asset/course/P2.png" alt="" />
-      <img class='logo' src="./asset/course/P2.png" alt="">
+      <img class='bg' src="./asset/index/P1_1.png" alt="" />
+      <img class='logo' src="./asset/index/PPLOGO.png" alt="">
     </section>
     <section class='section-2' id='s2'>
       <div class='main-panel'>
-          <h2 style="text-align: center;margin: 15px 0;" >Music word</h2 >
-          <h2 style="text-align: center;margin: 15px 0;" >音樂點字推廣</h2 >
+          <h2 style="text-align: center;margin: 10px 0;" >Music word</h2 >
+          <h2 style="text-align: center;margin: 10px 0;" >音樂點字推廣</h2 >
 
           緣起：<br/>
           辜進心老師畢業於文藻外語大學日文系，從小因為眼癌而全盲，2012年帶著導盲犬瑞斯到日本，2013年進入筑波大學附屬特別<br/>
@@ -322,8 +343,8 @@
         }
 
         .P3_2 {
-          top: 54vh;
-          left: 58vw;
+          top: 52vh;
+          left: 57vw;
         }
 
         .section-2 .main-panel {
@@ -384,7 +405,7 @@
                             (元大銀行樓上)<br>
       </div>
       <div class="white-box2">
-        參加對象：<br>
+          參加對象：<br>
         對音樂點字轉譯、推廣有興趣之民眾。<br><br>
         課程內容： <br>
         1.認識視障者的生活與限制<br>
